@@ -1,7 +1,19 @@
 *{ You can use plain selenium command using the selenium tag }*
 
+#{fixture delete:'all' /}
+
 #{selenium}
-    // Open the home page, and check that no error occured
     open('/')
+    clickAndWait('link=Find people')
+    assertTextNotPresent('Darth Vader')
+    clickAndWait('link=To main menu')
     assertNotTitle('Application error')
+    assertTextPresent('Create person')
+    clickAndWait('link=Create person')
+    assertTextPresent('Create person page')
+    type('fullName','Darth Vader')
+    clickAndWait('createPerson')
+    clickAndWait('link=Find people')
+    assertTextPresent('Search')
+    assertTextPresent('Darth Vader')
 #{/selenium}
