@@ -1,0 +1,1 @@
+An attempt on the spike kata using the play framework.
