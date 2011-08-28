@@ -16,7 +16,7 @@ public class Person extends Model {
 
 	public static List<Person> search(String namePattern) {
 		if ((namePattern == null) || namePattern.isEmpty()) {
-			return new ArrayList<Person>();
+			return Person.findAll();
 		}
 		return find("upper(name) like ?", "%" + namePattern.toUpperCase() +"%").fetch();
 	}

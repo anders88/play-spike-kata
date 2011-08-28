@@ -5,6 +5,10 @@
 # Home page
 GET     /                                       Application.index
 
+GET     /createPersonPage						Application.createPersonPage
+
+GET		/findPeople								Application.findPeople
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

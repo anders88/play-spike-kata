@@ -1,0 +1,8 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Create person</h1>
+<form action="@{Application.createPerson()}" method="POST">
+	<input type="text" name="fullName">
+	<input type="submit" value="Create person">
+</form>

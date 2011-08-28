@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<h1>Search</h1>
+<form action="@{Application.search}" method="GET">
+	<input type="text" name='namePattern'>
+	<input type="submit" value="Search">
+</form>
+<ul>
+#{list items:people, as:'person'}
+<li>${person.name}</li>
+#{/list}
+</ul>
+<a href="@{Application.index()}">To main menu</a>
